@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime-vest - AI Crypto Trading Excellence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" type="text/css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --accent: #f59e0b;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --success: #10b981;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        body {
+            background-color: #f1f5f9;
+            color: #334155;
+            line-height: 1.6;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        .logo span {
+            color: var(--accent);
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 25px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--secondary) 0%, #1e293b 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--gray);
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        .btn-accent {
+            background-color: var(--accent);
+        }
+        .btn-accent:hover {
+            background-color: #e99a0c;
+        }
+        section {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .strategies {
+            background-color: white;
+        }
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .strategy-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .strategy-card:hover {
+            transform: translateY(-5px);
+        }
+        .strategy-header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .strategy-body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content container">
+            <a href="#" class="logo">Prime<span>-vest</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#strategies">Strategies</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>AI Crypto Trading Excellence</h1>
+            <p>Welcome to Prime-vest, your gateway to automated, AI-powered cryptocurrency trading strategies. Maximize your returns with cutting-edge technology and expert insights.</p>
+            <a href="#strategies" class="btn btn-accent">Get Started</a>
+        </section>
+        <section id="strategies" class="strategies">
+            <div class="section-title">
+                <h2>Our Strategies</h2>
+                <p>Explore our range of AI-driven trading strategies designed for every market condition.</p>
+            </div>
+            <!-- Add your strategy cards here -->
+        </section>
+        <section id="about">
+            <div class="section-title">
+                <h2>About Prime-vest</h2>
+                <p>Prime-vest leverages advanced AI and machine learning to deliver superior crypto trading performance. Our platform is secure, transparent, and easy to use.</p>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Have questions? Reach out to our team for support and partnership opportunities.</p>
+            </div>
+        </section>
+    </main>
+    <footer style="text-align:center; padding:20px; background:#0f172a; color:white;">
+        &copy; 2025 Prime-vest. All rights reserved.
+    </footer>
+</body>
+</html>
