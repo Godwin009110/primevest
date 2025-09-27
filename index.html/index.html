@@ -597,6 +597,30 @@
                 font-size: 2rem;
             }
         }
+</style>
+    <style>
+        .floating-btn {
+            position: fixed;
+            top: 55px;
+            right: 30px;
+            background: var(--accent);
+            color: #fff;
+            padding: 18px 32px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            text-decoration: none;
+            z-index: 9999;
+            transition: background 0.2s, transform 0.2s;
+            border: none;
+            display: inline-block;
+        }
+        .floating-btn:hover {
+            background: #e99a0c;
+            transform: translateY(-3px) scale(1.04);
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -1221,5 +1245,6 @@
             });
         });
     </script>
-</body>
-</html>
+        <a href="prime2.html" class="floating-btn">Create Account</a>
+    </body>
+    </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - primevest</title>
+    <title>Create Account - Prime-vest</title>
     <style>
         * {
             margin: 0;
@@ -14,12 +14,9 @@
         }
         
         body {
-            background-color: #2d4364;
+            background-color: #f5f7fa;
             color: #333;
             line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
         
         .container {
@@ -29,7 +26,7 @@
         }
         
         header {
-            background: linear-gradient(135deg, #0e183d, #321477, #8d48a8);
+            background: linear-gradient(135deg, #1a2a6c, #342cad, #8d16b1);
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -54,51 +51,26 @@
             margin-top: 20px;
         }
         
-        .nav-container {
+        nav ul {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            list-style: none;
             flex-wrap: wrap;
         }
         
-        .nav-section {
+        nav ul li {
             margin: 0 15px;
         }
         
-        .nav-section h3 {
-            color: #fdbb2d;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        
-        .nav-section ul {
-            list-style: none;
-        }
-        
-        .nav-section ul li {
-            margin-bottom: 5px;
-        }
-        
-        .nav-section ul li a {
+        nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s;
         }
         
-        .nav-section ul li a:hover {
+        nav ul li a:hover {
             color: #fdbb2d;
-        }
-        
-        .language-selector {
-            display: flex;
-            justify-content: flex-end;
-            margin-top: 10px;
-        }
-        
-        .language-selector select {
-            padding: 5px 10px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            background-color: white;
         }
         
         .main-content {
@@ -108,27 +80,20 @@
             gap: 30px;
         }
         
-        .login-container {
+        .form-container {
             flex: 1;
             min-width: 300px;
             background-color: white;
-            padding: 40px;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            max-width: 450px;
-            margin: 0 auto;
         }
         
-        .login-container h2 {
+        .form-container h2 {
             color: #1a2a6c;
-            margin-bottom: 10px;
-            font-size: 1.8rem;
-        }
-        
-        .login-subtitle {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 1rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
         }
         
         .form-group {
@@ -157,8 +122,23 @@
             box-shadow: 0 0 0 2px rgba(26, 42, 108, 0.2);
         }
         
-        .login-btn {
-            background: linear-gradient(135deg, #13215c, #605ec4);
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            margin: 25px 0;
+        }
+        
+        .checkbox-group input {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .checkbox-group label {
+            font-weight: normal;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #1a2a6c, #a11fb2);
             color: white;
             border: none;
             padding: 14px 25px;
@@ -168,57 +148,11 @@
             width: 100%;
             font-weight: 600;
             transition: transform 0.3s, box-shadow 0.3s;
-            margin-top: 10px;
         }
         
-        .login-btn:hover {
+        .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .login-links {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .login-links a {
-            color: #1a2a6c;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .login-links a:hover {
-            color: #b21f1f;
-            text-decoration: underline;
-        }
-        
-        .signup-prompt {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        
-        .signup-btn {
-            background: transparent;
-            color: #1a2a6c;
-            border: 2px solid #1a2a6c;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-            margin-top: 10px;
-            width: 100%;
-        }
-        
-        .signup-btn:hover {
-            background: #1a2a6c;
-            color: white;
         }
         
         .info-section {
@@ -275,7 +209,7 @@
             color: white;
             text-align: center;
             padding: 20px 0;
-            margin-top: auto;
+            margin-top: 40px;
             border-radius: 10px 10px 0 0;
         }
         
@@ -284,25 +218,13 @@
                 flex-direction: column;
             }
             
-            .nav-container {
+            nav ul {
                 flex-direction: column;
+                align-items: center;
             }
             
-            .nav-section {
-                margin: 10px 0;
-            }
-            
-            .language-selector {
-                justify-content: center;
-            }
-            
-            .login-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .login-links a {
-                text-align: center;
+            nav ul li {
+                margin: 5px 0;
             }
         }
     </style>
@@ -310,83 +232,83 @@
 <body>
     <header>
         <div class="container">
-            <h1>UNITYTOPCORE</h1>
+            <h1>Prime-vest</h1>
             <p>Cutting-Edge Crypto Arbitrage Trading System</p>
         </div>
     </header>
     
     <div class="container">
-        <div class="language-selector">
-            <select>
-                <option value="en">EN</option>
-                <option value="es">ES</option>
-                <option value="fr">FR</option>
-                <option value="de">DE</option>
-            </select>
-        </div>
-        
         <nav>
-            <div class="nav-container">
-                <div class="nav-section">
-                    <h3>Navigation</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">FAQs</a></li>
-                    </ul>
-                </div>
-                
-                <div class="nav-section">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Terms and Conditions</a></li>
-                    </ul>
-                </div>
-                
-                <div class="nav-section">
-                    <h3>Terms of Use</h3>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Legal Information</a></li>
-                    </ul>
-                </div>
-            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+            </ul>
         </nav>
         
         <div class="main-content">
-            <div class="login-container">
-                <h2>Login</h2>
-                <p class="login-subtitle">Access your UNITYTOPCORE account</p>
-                
-                <form id="loginForm">
+            <div class="form-container">
+                <h2>Create Account</h2>
+                <form id="createAccountForm">
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" placeholder="Enter your username" required>
+                        <label for="fullName">Your Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter Your Full Name" required>
                     </div>
                     
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="Enter your password" required>
+                        <label for="username">Your Username</label>
+                        <input type="text" id="username" placeholder="Enter Your Username" required>
                     </div>
                     
-                    <button type="submit" class="login-btn">Login</button>
-                    
-                    <div class="login-links">
-                        <a href="#">Forgot your password?</a>
-                        <a href="#">Create account</a>
+                    <div class="form-group">
+                        <label for="password">Define Password</label>
+                        <input type="password" id="password" placeholder="Enter Define Password" required>
                     </div>
+                    
+                    <div class="form-group">
+                        <label for="retypePassword">Retype Password</label>
+                        <input type="password" id="retypePassword" placeholder="Enter Retype Password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your E-mail Address</label>
+                        <input type="email" id="email" placeholder="Enter E-mail Address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="retypeEmail">Retype Your E-mail</label>
+                        <input type="email" id="retypeEmail" placeholder="Enter Retype E-mail" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="country">Your Country</label>
+                        <input type="text" id="country" placeholder="Enter Your Country" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mobile">Your Mobile No.</label>
+                        <input type="tel" id="mobile" placeholder="Enter Mobile No." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="upline">Your Upline</label>
+                        <input type="text" id="upline" value="N/A (n/a)" readonly>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree with Terms and conditions</label>
+                    </div>
+                    
+                    <button type="submit" class="btn">Create Account</button>
                 </form>
-                
-                <div class="signup-prompt">
-                    <p>Don't have an account yet?</p>
-                    <button class="signup-btn">Sign Up</button>
-                </div>
             </div>
             
             <div class="info-section">
                 <div class="company-info">
-                    <h3>About UNITYTOPCORE</h3>
+                    <h3>About Prime-vest</h3>
                     <p>QG is a cutting-edge Crypto Arbitrage Trading System designed to maximize profits through advanced algorithms and market analysis.</p>
                     <p>Our platform offers secure, automated trading solutions for both novice and experienced traders in the cryptocurrency market.</p>
                 </div>
@@ -422,31 +344,39 @@
     
     <footer>
         <div class="container">
-            <p>&copy; 2023 UNITYTOPCORE. All rights reserved.</p>
+            <p>&copy; 2023 Prime-vest. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
+        document.getElementById('createAccountForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Basic form validation
-            const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
+            const retypePassword = document.getElementById('retypePassword').value;
+            const email = document.getElementById('email').value;
+            const retypeEmail = document.getElementById('retypeEmail').value;
+            const terms = document.getElementById('terms').checked;
             
-            if (!username || !password) {
-                alert('Please enter both username and password');
+            if (password !== retypePassword) {
+                alert('Passwords do not match!');
                 return;
             }
             
-            // Simulate login process
-            alert('Login successful! Redirecting to your dashboard...');
+            if (email !== retypeEmail) {
+                alert('Email addresses do not match!');
+                return;
+            }
+            
+            if (!terms) {
+                alert('You must agree to the Terms and Conditions');
+                return;
+            }
+            
+            // If validation passes, show success message
+            alert('Account created successfully!');
             // In a real application, you would submit the form data to a server here
-        });
-        
-        document.querySelector('.signup-btn').addEventListener('click', function() {
-            alert('Redirecting to registration page...');
-    
         });
     </script>
 </body>

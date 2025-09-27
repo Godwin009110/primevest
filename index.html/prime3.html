@@ -1,10 +1,14 @@
+Registration Success Page - UNITYTOPCORE
 
+I'll create a clean, professional HTML page for the registration success message as described in the PDF.
+
+html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - primevest</title>
+    <title>Registration Completed - UNITYTOPCORE</title>
     <style>
         * {
             margin: 0;
@@ -14,7 +18,7 @@
         }
         
         body {
-            background-color: #2d4364;
+            background-color: #f5f7fa;
             color: #333;
             line-height: 1.6;
             min-height: 100vh;
@@ -29,7 +33,7 @@
         }
         
         header {
-            background: linear-gradient(135deg, #0e183d, #321477, #8d48a8);
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -54,37 +58,25 @@
             margin-top: 20px;
         }
         
-        .nav-container {
+        nav ul {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            list-style: none;
             flex-wrap: wrap;
         }
         
-        .nav-section {
+        nav ul li {
             margin: 0 15px;
         }
         
-        .nav-section h3 {
-            color: #fdbb2d;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        
-        .nav-section ul {
-            list-style: none;
-        }
-        
-        .nav-section ul li {
-            margin-bottom: 5px;
-        }
-        
-        .nav-section ul li a {
+        nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: 500;
             transition: color 0.3s;
         }
         
-        .nav-section ul li a:hover {
+        nav ul li a:hover {
             color: #fdbb2d;
         }
         
@@ -108,117 +100,73 @@
             gap: 30px;
         }
         
-        .login-container {
-            flex: 1;
+        .success-container {
+            flex: 2;
             min-width: 300px;
             background-color: white;
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            max-width: 450px;
-            margin: 0 auto;
+            text-align: center;
         }
         
-        .login-container h2 {
-            color: #1a2a6c;
-            margin-bottom: 10px;
-            font-size: 1.8rem;
-        }
-        
-        .login-subtitle {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 1rem;
-        }
-        
-        .form-group {
+        .success-icon {
+            font-size: 4rem;
+            color: #4CAF50;
             margin-bottom: 20px;
         }
         
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #2c3e50;
+        .success-container h2 {
+            color: #1a2a6c;
+            margin-bottom: 20px;
+            font-size: 2rem;
         }
         
-        .form-group input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
+        .success-message {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+            text-align: left;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .success-message p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
             border-radius: 5px;
-            font-size: 16px;
-            transition: border 0.3s;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: left;
         }
         
-        .form-group input:focus {
-            border-color: #1a2a6c;
-            outline: none;
-            box-shadow: 0 0 0 2px rgba(26, 42, 108, 0.2);
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
         }
         
-        .login-btn {
-            background: linear-gradient(135deg, #13215c, #605ec4);
+        .btn {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f);
             color: white;
             border: none;
             padding: 14px 25px;
             font-size: 16px;
             border-radius: 5px;
             cursor: pointer;
-            width: 100%;
+            width: 200px;
             font-weight: 600;
             transition: transform 0.3s, box-shadow 0.3s;
-            margin-top: 10px;
+            margin-top: 20px;
         }
         
-        .login-btn:hover {
+        .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .login-links {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .login-links a {
-            color: #1a2a6c;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .login-links a:hover {
-            color: #b21f1f;
-            text-decoration: underline;
-        }
-        
-        .signup-prompt {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-        }
-        
-        .signup-btn {
-            background: transparent;
-            color: #1a2a6c;
-            border: 2px solid #1a2a6c;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
-            margin-top: 10px;
-            width: 100%;
-        }
-        
-        .signup-btn:hover {
-            background: #1a2a6c;
-            color: white;
         }
         
         .info-section {
@@ -284,25 +232,17 @@
                 flex-direction: column;
             }
             
-            .nav-container {
+            nav ul {
                 flex-direction: column;
+                align-items: center;
             }
             
-            .nav-section {
-                margin: 10px 0;
+            nav ul li {
+                margin: 5px 0;
             }
             
             .language-selector {
                 justify-content: center;
-            }
-            
-            .login-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .login-links a {
-                text-align: center;
             }
         }
     </style>
@@ -326,62 +266,31 @@
         </div>
         
         <nav>
-            <div class="nav-container">
-                <div class="nav-section">
-                    <h3>Navigation</h3>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">FAQs</a></li>
-                    </ul>
-                </div>
-                
-                <div class="nav-section">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Terms and Conditions</a></li>
-                    </ul>
-                </div>
-                
-                <div class="nav-section">
-                    <h3>Terms of Use</h3>
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Legal Information</a></li>
-                    </ul>
-                </div>
-            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
         </nav>
         
         <div class="main-content">
-            <div class="login-container">
-                <h2>Login</h2>
-                <p class="login-subtitle">Access your UNITYTOPCORE account</p>
+            <div class="success-container">
+                <div class="success-icon">✓</div>
+                <h2>Registration Completed</h2>
                 
-                <form id="loginForm">
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" placeholder="Enter your username" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="Enter your password" required>
-                    </div>
-                    
-                    <button type="submit" class="login-btn">Login</button>
-                    
-                    <div class="login-links">
-                        <a href="#">Forgot your password?</a>
-                        <a href="#">Create account</a>
-                    </div>
-                </form>
-                
-                <div class="signup-prompt">
-                    <p>Don't have an account yet?</p>
-                    <button class="signup-btn">Sign Up</button>
+                <div class="success-message">
+                    <p>Thank you for joining our program.</p>
+                    <p>You are now an official member of this program. You can login to your account to start investing with us and use all the services that are available for our members.</p>
                 </div>
+                
+                <div class="warning-box">
+                    <h4>Important:</h4>
+                    <p>Do not provide your login and password to anyone!</p>
+                </div>
+                
+                <button class="btn">Login</button>
             </div>
             
             <div class="info-section">
@@ -427,26 +336,11 @@
     </footer>
 
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Basic form validation
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            
-            if (!username || !password) {
-                alert('Please enter both username and password');
-                return;
-            }
-            
-            // Simulate login process
-            alert('Login successful! Redirecting to your dashboard...');
-            // In a real application, you would submit the form data to a server here
-        });
-        
-        document.querySelector('.signup-btn').addEventListener('click', function() {
-            alert('Redirecting to registration page...');
-    
+        // Simple script for the login button
+        document.querySelector('.btn').addEventListener('click', function() {
+            alert('Redirecting to login page...');
+            // In a real application, you would redirect to the login page
+            // window.location.href = 'login.html';
         });
     </script>
 </body>
